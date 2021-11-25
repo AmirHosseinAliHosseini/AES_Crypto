@@ -44,7 +44,7 @@ public:
 	 * @param out; The result of AES encryption (deque<Byte>).
 	 * @return Encryption result as boolean (true: SUCCESS; false: FAILED).
 	*/
-	bool EncryptCBC(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
+    bool EncryptCBC(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
 
 	/**
 	 * Decrypt input cipher text with an AES key in CBC Mode.
@@ -54,7 +54,7 @@ public:
 	 * @param out; The result of AES decryption (deque<Byte>).
 	 * @return Decryption result as boolean (true: SUCCESS; false: FAILED).
 	*/
-	bool DecryptCBC(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
+    bool DecryptCBC(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
 
 	/**
 	 * Encrypt input plain text with an AES key in PCBC Mode.
@@ -64,7 +64,7 @@ public:
 	 * @param out; The result of AES encryption (deque<Byte>).
 	 * @return Encryption result as boolean (true: SUCCESS; false: FAILED).
 	*/
-	bool EncryptPCBC(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
+    bool EncryptPCBC(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
 
 	/**
 	 * Decrypt input cipher text with an AES key in PCBC Mode.
@@ -73,8 +73,8 @@ public:
 	 * @param key; AES encryption key (deque<Byte>).
 	 * @param out; The result of AES decryption (deque<Byte>).
 	 * @return Decryption result as boolean (true: SUCCESS; false: FAILED).
-	*/
-	bool DecryptPCBC(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
+	*/ 
+    bool DecryptPCBC(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
 
 	/**
 	 * Encrypt input plain text with an AES key in CFB Mode.
@@ -84,7 +84,7 @@ public:
 	 * @param out; The result of AES encryption (deque<Byte>).
 	 * @return Encryption result as boolean (true: SUCCESS; false: FAILED).
 	*/
-	bool EncryptCFB(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
+    bool EncryptCFB(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
 
 	/**
 	 * Decrypt input cipher text with an AES key in CFB Mode.
@@ -94,7 +94,7 @@ public:
 	 * @param out; The result of AES decryption (deque<Byte>).
 	 * @return Decryption result as boolean (true: SUCCESS; false: FAILED).
 	*/
-	bool DecryptCFB(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
+    bool DecryptCFB(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
 
 	/**
 	 * Encrypt input plain text with an AES key in OFB Mode.
@@ -104,7 +104,7 @@ public:
 	 * @param out; The result of AES encryption (deque<Byte>).
 	 * @return Encryption result as boolean (true: SUCCESS; false: FAILED).
 	*/
-	bool EncryptOFB(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
+    bool EncryptOFB(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
 
 	/**
 	 * Decrypt input cipher text with an AES key in OFB Mode.
@@ -114,7 +114,7 @@ public:
 	 * @param out; The result of AES decryption (deque<Byte>).
 	 * @return Decryption result as boolean (true: SUCCESS; false: FAILED).
 	*/
-	bool DecryptOFB(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
+    bool DecryptOFB(const deque<Byte> in, const deque<Byte> key, const deque<Byte> iv, deque<Byte>& out);
 
 	/**
 	 * Print Hex input on Cammand Prompt.
