@@ -372,12 +372,12 @@ void AES::printHexArray(const deque<Byte>& a) const
         cout << setw(2) << (int)item;
     cout << endl;
 }
-bool AES::convertSTRtoVEC(const string& text, deque<Byte>& vec) const
+bool AES::convertSTRtoVEC(const string& text, deque<Byte>& deq) const
 {
     if (text.size() % 2)
         return false;
 
-    vec.resize(text.size() / 2);
+	deq.resize(text.size() / 2);
 
     Byte t = 0;
     for (size_t i = 0; i < text.size(); i++)
@@ -388,18 +388,20 @@ bool AES::convertSTRtoVEC(const string& text, deque<Byte>& vec) const
             t = text[i] - 'a' + 10;
         else if (text[i] >= 'A' && text[i] <= 'F')
             t = text[i] - 'A' + 10;
-        vec[i / 2] <<= 4;
-        vec[i / 2] |= t;
+		deq[i / 2] <<= 4;
+		deq[i / 2] |= t;
     }
     return true;
 }
-void AES::convertVECtoSTR(const deque<Byte>& vec, string& text) const
+bool AES::convertVECtoSTR(const deque<Byte>& deq, string& text) const
 {
     stringstream output;
     output << setfill('0') << hex;
-    for (auto item : vec)
+    for (auto item : deq)
         output << setw(2) << (int)item;
     text = output.str();
+
+	return true;
 }
 
 void AES::EncryptBlock()
