@@ -36,11 +36,11 @@ bool AES::EncryptECB(const deque<Byte> in, const deque<Byte> key, deque<Byte>& o
     out.resize(inPadd.size());
     for (Byte i = 0; i < inPadd.size(); i += blockLen)
     {
-		copy(inPadd.begin() + i, inPadd.begin() + i + blockLen, inBlock.begin());
+	copy(inPadd.begin() + i, inPadd.begin() + i + blockLen, inBlock.begin());
 
         EncryptBlock();
 
-		copy(inBlock.begin(), inBlock.end(), out.begin() + i);
+	copy(inBlock.begin(), inBlock.end(), out.begin() + i);
     }
 
     return true;
@@ -61,11 +61,11 @@ bool AES::DecryptECB(const deque<Byte> in, const deque<Byte> key, deque<Byte>& o
     out.resize(in.size());
     for (Byte i = 0; i < in.size(); i += blockLen)
     {
-		copy(in.begin() + i, in.begin() + i + blockLen, inBlock.begin());
+	copy(in.begin() + i, in.begin() + i + blockLen, inBlock.begin());
 
         DecryptBlock();
 
-		copy(inBlock.begin(), inBlock.end(), out.begin() + i);
+	copy(inBlock.begin(), inBlock.end(), out.begin() + i);
     }
 
     return true;
